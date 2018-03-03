@@ -35,6 +35,7 @@
 		ED600ADE204AF41800F4417C /* YATTweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED600ADC204AF41800F4417C /* YATTweetCell.m */; };
 		ED600ADF204AF41800F4417C /* YATTweetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED600ADD204AF41800F4417C /* YATTweetCell.xib */; };
 		ED600AE2204B1CAD00F4417C /* YATTwitterSearchService.m in Sources */ = {isa = PBXBuildFile; fileRef = ED600AE1204B1CAD00F4417C /* YATTwitterSearchService.m */; };
+		ED600AEB204B30ED00F4417C /* YATCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = ED600AEA204B30ED00F4417C /* YATCounter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,9 @@
 		ED600AE5204B1D0500F4417C /* YATTwitterAuthServiceType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATTwitterAuthServiceType.h; sourceTree = "<group>"; };
 		ED600AE6204B1D6500F4417C /* YATTwitterSearchServiceType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATTwitterSearchServiceType.h; sourceTree = "<group>"; };
 		ED600AE7204B1E3700F4417C /* YATNetworkProviderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATNetworkProviderType.h; sourceTree = "<group>"; };
+		ED600AE8204B2C6700F4417C /* YATTweetListInteractorOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATTweetListInteractorOutput.h; sourceTree = "<group>"; };
+		ED600AE9204B30ED00F4417C /* YATCounter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATCounter.h; sourceTree = "<group>"; };
+		ED600AEA204B30ED00F4417C /* YATCounter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YATCounter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +230,9 @@
 				ED600ADB204AF41800F4417C /* YATTweetCell.h */,
 				ED600ADC204AF41800F4417C /* YATTweetCell.m */,
 				ED600ADD204AF41800F4417C /* YATTweetCell.xib */,
+				ED600AE8204B2C6700F4417C /* YATTweetListInteractorOutput.h */,
+				ED600AE9204B30ED00F4417C /* YATCounter.h */,
+				ED600AEA204B30ED00F4417C /* YATCounter.m */,
 			);
 			path = TweetList;
 			sourceTree = "<group>";
@@ -336,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E5DBE6C2049B26F00BF89AA /* YATAuthToken.m in Sources */,
+				ED600AEB204B30ED00F4417C /* YATCounter.m in Sources */,
 				0E5DBE692049B1EF00BF89AA /* YATTwitterAuthService.m in Sources */,
 				ED600AC1204AC0CC00F4417C /* YATLaunchRouter.m in Sources */,
 				0E5DBE742049B4EA00BF89AA /* YATTwitterHelper.m in Sources */,

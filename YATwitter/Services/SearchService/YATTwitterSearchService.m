@@ -28,7 +28,7 @@
 
 - (void)getTweetsForUsername:(nonnull NSString*)username completion:(nonnull YATTwitterServiceTweetsCompletion)completion {
     NSString* authorization = [@"Bearer " stringByAppendingString:self.state.token.value];
-    NSString* format = [NSString stringWithFormat:@"https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=%@", username];
+    NSString* format = [NSString stringWithFormat:@"https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=%@", [username stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
     NSURL* url = [NSURL URLWithString:format];
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = @"GET";
@@ -46,7 +46,7 @@
 
 - (void)getTweetsByWord:(nonnull NSString*)word completion:(nonnull YATTwitterServiceTweetsCompletion)completion {
     NSString* authorization = [@"Bearer " stringByAppendingString:self.state.token.value];
-    NSString* format = [NSString stringWithFormat:@"https://api.twitter.com/1.1/search/tweets.json?q=%@", word];
+    NSString* format = [NSString stringWithFormat:@"https://api.twitter.com/1.1/search/tweets.json?q=%@", [word stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
     NSURL* url = [NSURL URLWithString:format];
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = @"GET";

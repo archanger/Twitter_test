@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "YATTweetListInteractorType.h"
 #import "YATTweetListDatasourceType.h"
+#import "YATTweetListInteractorOutput.h"
 
-@interface YATTweetListViewController : UIViewController
+@interface YATTweetListViewController : UIViewController <YATTweetListInteractorOutput>
 @property (nonatomic, strong) id<YATTweetListInteractorType> interactor;
 @property (weak, nonatomic) id<YATTweetListDatasourceType> datasource;
 @end

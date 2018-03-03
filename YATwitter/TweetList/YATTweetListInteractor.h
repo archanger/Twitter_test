@@ -11,9 +11,10 @@
 #import "YATTwitterSearchServiceType.h"
 #import "YATAppState.h"
 #import "YATTweetListDatasourceType.h"
-
+#import "YATTweetListInteractorOutput.h"
 
 @interface YATTweetListInteractor : NSObject<YATTweetListInteractorType>
+@property (nonatomic, weak) id<YATTweetListInteractorOutput> output;
 @property (nonatomic, strong) id<YATTweetListDatasourceType> datasource;
 
 - (instancetype)initWithService:(id<YATTwitterSearchServiceType>)service;

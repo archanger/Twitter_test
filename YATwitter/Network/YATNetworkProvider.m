@@ -36,6 +36,7 @@
               dispatch_async(dispatch_get_main_queue(), ^{
                   failure(error);
               });
+              return ;
           }
           
           NSError* jsonError;
@@ -47,6 +48,7 @@
               dispatch_async(dispatch_get_main_queue(), ^{
                   failure(error);
               });
+              return ;
           }
           
           if ([json isKindOfClass:[NSDictionary class]] && [(NSDictionary*)json objectForKey:@"error"]) {
@@ -55,6 +57,7 @@
                                               code:10001
                                           userInfo:@{ NSLocalizedDescriptionKey: [(NSDictionary*)json objectForKey:@"error"]}]);
               });
+              return ;
           }
           
           if ([json isKindOfClass:[NSDictionary class]] && [(NSDictionary*)json objectForKey:@"errors"]) {
@@ -70,6 +73,7 @@
                                               code:10002
                                           userInfo:@{ NSLocalizedDescriptionKey: [errors componentsJoinedByString:@", "] }]);
               });
+              return ;
           }
           
           dispatch_async(dispatch_get_main_queue(), ^{

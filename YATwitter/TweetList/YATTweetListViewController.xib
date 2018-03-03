@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YATTweetListViewController">
             <connections>
+                <outlet property="counter" destination="Re4-MY-PUN" id="wmp-17-U8z"/>
                 <outlet property="searchBar" destination="0gy-rv-3Hx" id="sAY-on-dfH"/>
                 <outlet property="switchControl" destination="O6p-yr-pEo" id="Qg5-F7-Iao"/>
                 <outlet property="tableView" destination="X62-7b-aOl" id="Dst-Bs-TLJ"/>
@@ -34,6 +35,13 @@
                     <rect key="frame" x="0.0" y="104" width="375" height="563"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re4-MY-PUN">
+                    <rect key="frame" x="325" y="646" width="42" height="21"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Enter username" translatesAutoresizingMaskIntoConstraints="NO" id="0gy-rv-3Hx">
                     <rect key="frame" x="0.0" y="48" width="375" height="56"/>
                     <textInputTraits key="textInputTraits"/>
@@ -44,7 +52,9 @@
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="X62-7b-aOl" secondAttribute="bottom" id="0DU-ON-jec"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="0gy-rv-3Hx" secondAttribute="trailing" id="7M1-tt-A8c"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="O6p-yr-pEo" secondAttribute="trailing" id="9lG-VT-VgG"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Re4-MY-PUN" secondAttribute="trailing" constant="8" id="Ab1-On-WhT"/>
                 <constraint firstItem="X62-7b-aOl" firstAttribute="top" secondItem="0gy-rv-3Hx" secondAttribute="bottom" id="BEo-2j-wFv"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="Re4-MY-PUN" secondAttribute="bottom" id="G7y-jy-cQL"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="X62-7b-aOl" secondAttribute="trailing" id="Hyh-F0-hiU"/>
                 <constraint firstItem="0gy-rv-3Hx" firstAttribute="top" secondItem="O6p-yr-pEo" secondAttribute="bottom" id="S0p-8o-Z5g"/>
                 <constraint firstItem="X62-7b-aOl" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="XVd-ww-a9v"/>

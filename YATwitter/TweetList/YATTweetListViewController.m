@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic, readwrite) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *switchControl;
+@property (weak, nonatomic) IBOutlet UILabel *counter;
 @end
 
 @implementation YATTweetListViewController
@@ -47,6 +48,10 @@
         default:
             break;
     }
+}
+
+- (void)setCurrentCountdown:(NSInteger)count {
+    self.counter.text = [NSString stringWithFormat:@"Time to update: %ld second(s)", (long)count];
 }
 
 @end

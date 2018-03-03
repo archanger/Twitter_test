@@ -25,6 +25,7 @@
     
     list.interactor = interactor;
     list.datasource = datasource;
+    interactor.output = list;
     interactor.datasource = datasource;
     
     return list;
