@@ -10,13 +10,13 @@
 #import "YATLaunchIntercatorType.h"
 #import "YATLaunchIntercatorOutput.h"
 
-@class YATTwitterService;
+@class YATTwitterAuthService;
 @class YATAppState;
 
 @interface YATLaunchInteractor : NSObject <YATLaunchIntercatorType>
 @property (nonatomic, weak) id<YATLaunchIntercatorOutput> output;
 
 
-- (instancetype)initWithService:(YATTwitterService*) service
+- (instancetype)initWithService:(YATTwitterAuthService*) service
                           state:(YATAppState*) state;
 @end

@@ -9,16 +9,18 @@
 #import "YATTweetListRouter.h"
 #import "YATTweetListViewController.h"
 #import "YATTweetListInteractor.h"
-#import "YATTwitterService.h"
+#import "YATTwitterSearchService.h"
 #import "YATTweetListDatasource.h"
+#import "YATNetworkProvider.h"
 
 @implementation YATTweetListRouter
 
 + (UIViewController*)tweetList {
     __auto_type list = [[YATTweetListViewController alloc] initWithNibName:NSStringFromClass([YATTweetListViewController class])
                                                                     bundle:[NSBundle mainBundle]];
-    __auto_type interactor = [[YATTweetListInteractor alloc] initWithService:[[YATTwitterService alloc] init]
-                                                                    appState:[YATAppState sharedState]];
+    __auto_type interactor = [[YATTweetListInteractor alloc] initWithService:[[YATTwitterSearchService alloc]
+                                                                              initWithNetworkProvider:[YATNetworkProvider new]
+                                                                              appState:[YATAppState sharedState]]];
     __auto_type datasource = [[YATTweetListDatasource alloc] init];
     
     list.interactor = interactor;

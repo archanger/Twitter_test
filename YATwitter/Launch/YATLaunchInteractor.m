@@ -7,17 +7,17 @@
 //
 
 #import "YATLaunchInteractor.h"
-#import "YATTwitterService.h"
+#import "YATTwitterAuthService.h"
 #import "YATAppState.h"
 
 @interface YATLaunchInteractor ()
-@property (nonatomic, strong) YATTwitterService* service;
+@property (nonatomic, strong) YATTwitterAuthService* service;
 @property (nonatomic, strong) YATAppState* appState;
 @end
 
 @implementation YATLaunchInteractor
 
-- (instancetype)initWithService:(YATTwitterService*) service
+- (instancetype)initWithService:(YATTwitterAuthService*) service
                           state:(YATAppState*) state{
     if (self = [super init]) {
         _service = service;

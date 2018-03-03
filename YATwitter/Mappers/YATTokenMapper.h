@@ -10,5 +10,5 @@
 #import "YATAuthToken.h"
 
 @interface YATTokenMapper : NSObject
-- (YATAuthToken*)tokenFromJsonData:(NSData*)data;
+- (YATAuthToken*)tokenFromJsonObject:(NSDictionary*)object;
 @end

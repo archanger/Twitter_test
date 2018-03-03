@@ -10,27 +10,15 @@
 
 @implementation YATTweetMapper
 
-- (NSArray<YATTweet*>*)tweetsFromJsonData:(NSData*)data {
-    NSError* error;
-    NSArray* json = [NSJSONSerialization JSONObjectWithData:data
-                                                    options:kNilOptions
-                                                      error:&error];
+- (NSArray<YATTweet*>*)tweetsFromJsonObject:(NSArray*)object; {
     
-    if (error) {
-        return nil;
-    }
-    
-    if ([json isKindOfClass:[NSDictionary class]] && ([(NSDictionary*)json objectForKey:@"errors"] || [(NSDictionary*)json objectForKey:@"error"])) {
-        return nil;
-    }
-    
-    if ([json isKindOfClass:[NSDictionary class]] && [(NSDictionary*)json objectForKey:@"statuses"]) {
-        json = [(NSDictionary*)json objectForKey:@"statuses"];
+    if ([object isKindOfClass:[NSDictionary class]] && [(NSDictionary*)object objectForKey:@"statuses"]) {
+        object = [(NSDictionary*)object objectForKey:@"statuses"];
     }
     
     NSMutableArray<YATTweet*>* result = [[NSMutableArray alloc] init];
     
-    for (NSDictionary* tweet in json) {
+    for (NSDictionary* tweet in object) {
         YATTweet* twt = [self tweetFromJSONDictionary:tweet];
         [result addObject:twt];
     }
@@ -40,7 +28,7 @@
 
 - (YATTweet*)tweetFromJSONDictionary:(NSDictionary*)dict {
     
-    __auto_type tweet = [[YATTweet alloc] init];
+    YATTweet* tweet = [[YATTweet alloc] init];
     tweet.tweetID = [dict objectForKey:@"id_str"];
     tweet.text = [dict objectForKey:@"text"];
     tweet.userID = [dict valueForKeyPath:@"user.id_str"];

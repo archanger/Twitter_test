@@ -9,17 +9,15 @@
 #import "YATTweetListInteractor.h"
 
 @interface YATTweetListInteractor ()
-@property (nonatomic, strong) YATTwitterService* service;
-@property (nonatomic, strong) YATAppState* state;
+@property (nonatomic, strong) id<YATTwitterSearchServiceType> service;
 @property (nonatomic, assign) BOOL byUsername;
 @end
 
 @implementation YATTweetListInteractor
 
-- (instancetype)initWithService:(YATTwitterService*)service appState:(YATAppState*)state {
+- (instancetype)initWithService:(id<YATTwitterSearchServiceType>)service {
     if (self = [super init]) {
         _service = service;
-        _state = state;
     }
     
     return self;

@@ -10,18 +10,10 @@
 
 @implementation YATTokenMapper
 
-- (YATAuthToken*)tokenFromJsonData:(NSData*)data {
-    NSError* error;
-    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data
-                                                         options:kNilOptions
-                                                           error:&error];
-    
-    if (error) {
-        return nil;
-    }
+- (YATAuthToken*)tokenFromJsonObject:(NSDictionary*)object {
     
     YATAuthToken* token = [[YATAuthToken alloc] init];
-    token.value = [json objectForKey:@"access_token"];
+    token.value = [object objectForKey:@"access_token"];
     
     return token;
 }

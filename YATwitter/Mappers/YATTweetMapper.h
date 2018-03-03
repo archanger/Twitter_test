@@ -10,5 +10,5 @@
 #import "YATTweet.h"
 
 @interface YATTweetMapper : NSObject
-- (NSArray<YATTweet*>*)tweetsFromJsonData:(NSData*)data;
+- (NSArray<YATTweet*>*)tweetsFromJsonObject:(NSArray*)object;
 @end

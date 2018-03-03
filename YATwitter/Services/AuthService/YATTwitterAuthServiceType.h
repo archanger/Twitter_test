@@ -1,26 +1,20 @@
 //
-//  YATTwitterService.h
+//  YATTwitterAuthServiceType.h
 //  YATwitter
 //
-//  Created by Кирилл Чуянов on 02/03/2018.
+//  Created by Кирилл Чуянов on 03.03.2018.
 //  Copyright © 2018 Кирилл Чуянов. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "YATTwitterConfig.h"
 #import "YATAuthToken.h"
-#import "YATTweet.h"
+#import "YATTwitterConfig.h"
 
 typedef void(^YATTwitterServiceSuccessCompletion)(YATAuthToken* _Nonnull token);
 typedef void(^YATTwitterServiceFailureCompletion)(NSError* _Nonnull error);
 
-typedef void(^YATTwitterServiceTweetsCompletion)(NSArray<YATTweet*>* _Nullable tweets);
-
-@interface YATTwitterService : NSObject
+@protocol YATTwitterAuthServiceType <NSObject>
 - (void)authenticateAppWithConfig:(nonnull YATTwitterConfig*)config
                           success:(nonnull YATTwitterServiceSuccessCompletion)success
                           failure:(nonnull YATTwitterServiceFailureCompletion)failure;
-
-- (void)getTweetsForUsername:(nonnull NSString*)username completion:(nonnull YATTwitterServiceTweetsCompletion)completion;
-- (void)getTweetsByWord:(nonnull NSString*)word completion:(nonnull YATTwitterServiceTweetsCompletion)completion;
 @end

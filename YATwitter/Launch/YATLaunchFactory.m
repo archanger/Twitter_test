@@ -9,17 +9,19 @@
 #import "YATLaunchFactory.h"
 #import "YATLaunchViewController.h"
 #import "YATLaunchInteractor.h"
-#import "YATTwitterService.h"
+#import "YATTwitterAuthService.h"
 #import "YATAppState.h"
 #import "YATLaunchRouter.h"
+#import "YATNetworkProvider.h"
 
 @implementation YATLaunchFactory
 + (UIViewController*)launchScreenInRouter:(id<YATLaunchRouterType>) router {
     
     __auto_type vc = [[YATLaunchViewController alloc] initWithNibName:NSStringFromClass([YATLaunchViewController class])
-                                                                            bundle:[NSBundle mainBundle]];
-    __auto_type intercator = [[YATLaunchInteractor alloc] initWithService:[[YATTwitterService alloc] init]
-                                                                             state:[YATAppState sharedState]];
+                                                               bundle:[NSBundle mainBundle]];
+    __auto_type intercator = [[YATLaunchInteractor alloc] initWithService:[[YATTwitterAuthService alloc]
+                                                                           initWithNetworkProvider:[YATNetworkProvider new]]
+                                                                    state:[YATAppState sharedState]];
     
     vc.interactor = intercator;
     vc.router = router;
