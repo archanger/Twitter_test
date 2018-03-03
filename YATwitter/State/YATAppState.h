@@ -12,5 +12,5 @@
 @interface YATAppState : NSObject
 @property (nonatomic, strong) YATAuthToken* token;
 
-- (instancetype)sharedState;
++ (instancetype)sharedState;
 @end

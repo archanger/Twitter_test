@@ -33,10 +33,14 @@
       ^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
           
           if (error != nil) {
-              failure(error);
+              dispatch_async(dispatch_get_main_queue(), ^{
+                  failure(error);
+              });
           }
           
-          success(data);
+          dispatch_async(dispatch_get_main_queue(), ^{
+              success(data);
+          });
           
       }] resume];
     

@@ -10,9 +10,12 @@
 #import "YATTwitterHelper.h"
 #import "NetworkProvider.h"
 #import "YATTokenMapper.h"
+#import "YATAppState.h"
+#import "YATTweetMapper.h"
 
 @interface YATTwitterService ()
 @property (nonatomic, strong) NetworkProvider* provider;
+@property (nonatomic, strong) YATAppState* state;
 @end
 
 @implementation YATTwitterService
@@ -22,6 +25,7 @@
     self = [super init];
     if (self) {
         _provider = [[NetworkProvider alloc] init];
+        _state = [YATAppState sharedState];
     }
     return self;
 }
@@ -41,6 +45,24 @@
              success([[[YATTokenMapper alloc] init] tokenFromJsonData:responseData]);
          } completionFailure:^(NSError * _Nonnull error) {
              failure(error);
+         }
+     ];
+    
+}
+
+- (void)getTweetsForUsername:(nonnull NSString*)username completion:(nonnull YATTwitterServiceTweetsCompletion)completion {
+    NSString* authorization = [@"Bearer " stringByAppendingString:self.state.token.value];
+    NSString* format = [NSString stringWithFormat:@"https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=%@", username];
+    NSURL* url = [NSURL URLWithString:format];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
+    request.HTTPMethod = @"GET";
+    [request addValue:authorization forHTTPHeaderField:@"Authorization"];
+    
+    [_provider makeRequest:request
+         completionSuccess:^(NSData * _Nonnull responseData) {
+             completion([[[YATTweetMapper alloc] init] tweetsFromJsonData:responseData]);
+         } completionFailure:^(NSError * _Nonnull error) {
+             completion(nil);
          }
      ];
     

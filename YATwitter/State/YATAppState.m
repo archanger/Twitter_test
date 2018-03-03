@@ -10,7 +10,7 @@
 
 @implementation YATAppState
 
-- (instancetype)sharedState {
++ (instancetype)sharedState {
     static dispatch_once_t onceToken;
     static YATAppState* shared = nil;
     dispatch_once(&onceToken, ^{

@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YATLaunchIntercatorType.h"
+#import "YATLaunchIntercatorOutput.h"
+#import "YATLaunchRouterType.h"
 
-@interface YATLaunchViewController : UIViewController
-@property (nonatomic, strong) id<>
+@interface YATLaunchViewController : UIViewController <YATLaunchIntercatorOutput>
+@property (nonatomic, strong) id<YATLaunchIntercatorType> interactor;
+@property (nonatomic, strong) id<YATLaunchRouterType> router;
 @end
