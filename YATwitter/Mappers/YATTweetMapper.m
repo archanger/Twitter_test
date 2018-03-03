@@ -24,6 +24,10 @@
         return nil;
     }
     
+    if ([json isKindOfClass:[NSDictionary class]] && [(NSDictionary*)json objectForKey:@"statuses"]) {
+        json = [(NSDictionary*)json objectForKey:@"statuses"];
+    }
+    
     NSMutableArray<YATTweet*>* result = [[NSMutableArray alloc] init];
     
     for (NSDictionary* tweet in json) {

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @protocol YATTweetListInteractorType <UISearchBarDelegate>
-
+- (void)setByUsername;
+- (void)setBySearch;
 @end

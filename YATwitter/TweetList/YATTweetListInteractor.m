@@ -11,6 +11,7 @@
 @interface YATTweetListInteractor ()
 @property (nonatomic, strong) YATTwitterService* service;
 @property (nonatomic, strong) YATAppState* state;
+@property (nonatomic, assign) BOOL byUsername;
 @end
 
 @implementation YATTweetListInteractor
@@ -36,10 +37,23 @@
 
 - (void)searchText:(NSString*)text {
     __weak typeof(self) weakSelf = self;
-    [self.service getTweetsForUsername:text completion:^(NSArray<YATTweet *> * _Nullable tweets) {
-        NSLog(@"%lu", tweets.count);
-        [weakSelf.datasource setTweets:tweets];
-    }];
+    if (self.byUsername) {
+        [self.service getTweetsForUsername:text completion:^(NSArray<YATTweet *> * _Nullable tweets) {
+            [weakSelf.datasource setTweets:tweets];
+        }];
+    } else {
+        [self.service getTweetsByWord:text completion:^(NSArray<YATTweet *> * _Nullable tweets) {
+            [weakSelf.datasource setTweets:tweets];
+        }];
+    }
+}
+
+- (void)setBySearch {
+    self.byUsername = NO;
+}
+
+- (void)setByUsername {
+    self.byUsername = YES;
 }
 
 @end

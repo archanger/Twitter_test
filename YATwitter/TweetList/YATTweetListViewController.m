@@ -12,6 +12,7 @@
 @interface YATTweetListViewController ()
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic, readwrite) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *switchControl;
 @end
 
 @implementation YATTweetListViewController
@@ -24,12 +25,28 @@
     
     self.searchBar.delegate = self.interactor;
     [self.datasource setTableView:self.tableView];
+    [self.interactor setByUsername];
+    self.switchControl.selectedSegmentIndex = 0;
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 44;
     
     [self.tableView registerNib:[YATTweetCell nib] forCellReuseIdentifier:[YATTweetCell reuseIdentifier]];
+    
+    [self.switchControl addTarget:self action:@selector(selectedOptionChanged:) forControlEvents:(UIControlEventValueChanged)];
 }
 
+- (void)selectedOptionChanged:(UISegmentedControl*)sender {
+    switch (sender.selectedSegmentIndex) {
+        case 0:
+            [self.interactor setByUsername];
+            break;
+        case 1:
+            [self.interactor setBySearch];
+            break;
+        default:
+            break;
+    }
+}
 
 @end

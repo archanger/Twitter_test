@@ -22,4 +22,5 @@ typedef void(^YATTwitterServiceTweetsCompletion)(NSArray<YATTweet*>* _Nullable t
                           failure:(nonnull YATTwitterServiceFailureCompletion)failure;
 
 - (void)getTweetsForUsername:(nonnull NSString*)username completion:(nonnull YATTwitterServiceTweetsCompletion)completion;
+- (void)getTweetsByWord:(nonnull NSString*)word completion:(nonnull YATTwitterServiceTweetsCompletion)completion;
 @end

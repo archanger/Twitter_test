@@ -67,4 +67,23 @@
      ];
     
 }
+
+- (void)getTweetsByWord:(nonnull NSString*)word completion:(nonnull YATTwitterServiceTweetsCompletion)completion {
+    NSString* authorization = [@"Bearer " stringByAppendingString:self.state.token.value];
+    NSString* format = [NSString stringWithFormat:@"https://api.twitter.com/1.1/search/tweets.json?q=%@", word];
+    NSURL* url = [NSURL URLWithString:format];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
+    request.HTTPMethod = @"GET";
+    [request addValue:authorization forHTTPHeaderField:@"Authorization"];
+    
+    [_provider makeRequest:request
+         completionSuccess:^(NSData * _Nonnull responseData) {
+             completion([[[YATTweetMapper alloc] init] tweetsFromJsonData:responseData]);
+         } completionFailure:^(NSError * _Nonnull error) {
+             completion(nil);
+         }
+     ];
+    
+}
+
 @end
