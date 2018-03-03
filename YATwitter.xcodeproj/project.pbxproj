@@ -9,11 +9,21 @@
 /* Begin PBXBuildFile section */
 		0E5DBE4B2049AE6A00BF89AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5DBE4A2049AE6A00BF89AA /* AppDelegate.m */; };
 		0E5DBE4E2049AE6A00BF89AA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5DBE4D2049AE6A00BF89AA /* ViewController.m */; };
-		0E5DBE512049AE6A00BF89AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E5DBE4F2049AE6A00BF89AA /* Main.storyboard */; };
 		0E5DBE542049AE6A00BF89AA /* YATwitter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E5DBE522049AE6A00BF89AA /* YATwitter.xcdatamodeld */; };
 		0E5DBE562049AE6A00BF89AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5DBE552049AE6A00BF89AA /* Assets.xcassets */; };
 		0E5DBE592049AE6A00BF89AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E5DBE572049AE6A00BF89AA /* LaunchScreen.storyboard */; };
 		0E5DBE5C2049AE6A00BF89AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5DBE5B2049AE6A00BF89AA /* main.m */; };
+		0E5DBE652049AF2B00BF89AA /* NetworkProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5DBE642049AF2B00BF89AA /* NetworkProvider.m */; };
+		0E5DBE692049B1EF00BF89AA /* YATTwitterService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5DBE682049B1EF00BF89AA /* YATTwitterService.m */; };
+		0E5DBE6C2049B26F00BF89AA /* YATAuthToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5DBE6B2049B26F00BF89AA /* YATAuthToken.m */; };
+		0E5DBE6E2049B31700BF89AA /* YATTwitterConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E5DBE6D2049B31700BF89AA /* YATTwitterConfig.plist */; };
+		0E5DBE712049B3C100BF89AA /* YATTwitterConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5DBE702049B3C100BF89AA /* YATTwitterConfig.m */; };
+		0E5DBE742049B4EA00BF89AA /* YATTwitterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5DBE732049B4EA00BF89AA /* YATTwitterHelper.m */; };
+		0E5DBE782049BAD900BF89AA /* YATTokenMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5DBE772049BAD900BF89AA /* YATTokenMapper.m */; };
+		0E5DBE7D2049C2BF00BF89AA /* YATLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5DBE7B2049C2BF00BF89AA /* YATLaunchViewController.m */; };
+		0E5DBE7E2049C2BF00BF89AA /* YATLaunchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E5DBE7C2049C2BF00BF89AA /* YATLaunchViewController.xib */; };
+		0E5DBE822049C5DC00BF89AA /* YATLaunchInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5DBE812049C5DC00BF89AA /* YATLaunchInteractor.m */; };
+		0E5DBE872049C7C300BF89AA /* YATAppState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5DBE862049C7C300BF89AA /* YATAppState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +32,32 @@
 		0E5DBE4A2049AE6A00BF89AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0E5DBE4C2049AE6A00BF89AA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0E5DBE4D2049AE6A00BF89AA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		0E5DBE502049AE6A00BF89AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E5DBE532049AE6A00BF89AA /* YATwitter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YATwitter.xcdatamodel; sourceTree = "<group>"; };
 		0E5DBE552049AE6A00BF89AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E5DBE582049AE6A00BF89AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E5DBE5A2049AE6A00BF89AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E5DBE5B2049AE6A00BF89AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0E5DBE632049AF2B00BF89AA /* NetworkProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkProvider.h; sourceTree = "<group>"; };
+		0E5DBE642049AF2B00BF89AA /* NetworkProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkProvider.m; sourceTree = "<group>"; };
+		0E5DBE672049B1EF00BF89AA /* YATTwitterService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATTwitterService.h; sourceTree = "<group>"; };
+		0E5DBE682049B1EF00BF89AA /* YATTwitterService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YATTwitterService.m; sourceTree = "<group>"; };
+		0E5DBE6A2049B26F00BF89AA /* YATAuthToken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATAuthToken.h; sourceTree = "<group>"; };
+		0E5DBE6B2049B26F00BF89AA /* YATAuthToken.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YATAuthToken.m; sourceTree = "<group>"; };
+		0E5DBE6D2049B31700BF89AA /* YATTwitterConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = YATTwitterConfig.plist; sourceTree = "<group>"; };
+		0E5DBE6F2049B3C100BF89AA /* YATTwitterConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATTwitterConfig.h; sourceTree = "<group>"; };
+		0E5DBE702049B3C100BF89AA /* YATTwitterConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YATTwitterConfig.m; sourceTree = "<group>"; };
+		0E5DBE722049B4EA00BF89AA /* YATTwitterHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATTwitterHelper.h; sourceTree = "<group>"; };
+		0E5DBE732049B4EA00BF89AA /* YATTwitterHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YATTwitterHelper.m; sourceTree = "<group>"; };
+		0E5DBE762049BAD900BF89AA /* YATTokenMapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATTokenMapper.h; sourceTree = "<group>"; };
+		0E5DBE772049BAD900BF89AA /* YATTokenMapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YATTokenMapper.m; sourceTree = "<group>"; };
+		0E5DBE7A2049C2BF00BF89AA /* YATLaunchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATLaunchViewController.h; sourceTree = "<group>"; };
+		0E5DBE7B2049C2BF00BF89AA /* YATLaunchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YATLaunchViewController.m; sourceTree = "<group>"; };
+		0E5DBE7C2049C2BF00BF89AA /* YATLaunchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YATLaunchViewController.xib; sourceTree = "<group>"; };
+		0E5DBE802049C5DC00BF89AA /* YATLaunchInteractor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATLaunchInteractor.h; sourceTree = "<group>"; };
+		0E5DBE812049C5DC00BF89AA /* YATLaunchInteractor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YATLaunchInteractor.m; sourceTree = "<group>"; };
+		0E5DBE832049C61F00BF89AA /* YATLaunchIntercatorType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATLaunchIntercatorType.h; sourceTree = "<group>"; };
+		0E5DBE852049C7C300BF89AA /* YATAppState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATAppState.h; sourceTree = "<group>"; };
+		0E5DBE862049C7C300BF89AA /* YATAppState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YATAppState.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +90,15 @@
 		0E5DBE482049AE6A00BF89AA /* YATwitter */ = {
 			isa = PBXGroup;
 			children = (
+				0E5DBE842049C7B100BF89AA /* State */,
+				0E5DBE792049C26400BF89AA /* Launch */,
+				0E5DBE752049BAAD00BF89AA /* Mappers */,
+				0E5DBE662049B1E000BF89AA /* Services */,
+				0E5DBE622049AEFF00BF89AA /* Network */,
 				0E5DBE492049AE6A00BF89AA /* AppDelegate.h */,
 				0E5DBE4A2049AE6A00BF89AA /* AppDelegate.m */,
 				0E5DBE4C2049AE6A00BF89AA /* ViewController.h */,
 				0E5DBE4D2049AE6A00BF89AA /* ViewController.m */,
-				0E5DBE4F2049AE6A00BF89AA /* Main.storyboard */,
 				0E5DBE552049AE6A00BF89AA /* Assets.xcassets */,
 				0E5DBE572049AE6A00BF89AA /* LaunchScreen.storyboard */,
 				0E5DBE5A2049AE6A00BF89AA /* Info.plist */,
@@ -72,6 +106,62 @@
 				0E5DBE522049AE6A00BF89AA /* YATwitter.xcdatamodeld */,
 			);
 			path = YATwitter;
+			sourceTree = "<group>";
+		};
+		0E5DBE622049AEFF00BF89AA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0E5DBE632049AF2B00BF89AA /* NetworkProvider.h */,
+				0E5DBE642049AF2B00BF89AA /* NetworkProvider.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0E5DBE662049B1E000BF89AA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0E5DBE672049B1EF00BF89AA /* YATTwitterService.h */,
+				0E5DBE682049B1EF00BF89AA /* YATTwitterService.m */,
+				0E5DBE6A2049B26F00BF89AA /* YATAuthToken.h */,
+				0E5DBE6B2049B26F00BF89AA /* YATAuthToken.m */,
+				0E5DBE6D2049B31700BF89AA /* YATTwitterConfig.plist */,
+				0E5DBE6F2049B3C100BF89AA /* YATTwitterConfig.h */,
+				0E5DBE702049B3C100BF89AA /* YATTwitterConfig.m */,
+				0E5DBE722049B4EA00BF89AA /* YATTwitterHelper.h */,
+				0E5DBE732049B4EA00BF89AA /* YATTwitterHelper.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0E5DBE752049BAAD00BF89AA /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				0E5DBE762049BAD900BF89AA /* YATTokenMapper.h */,
+				0E5DBE772049BAD900BF89AA /* YATTokenMapper.m */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		0E5DBE792049C26400BF89AA /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				0E5DBE7A2049C2BF00BF89AA /* YATLaunchViewController.h */,
+				0E5DBE7B2049C2BF00BF89AA /* YATLaunchViewController.m */,
+				0E5DBE7C2049C2BF00BF89AA /* YATLaunchViewController.xib */,
+				0E5DBE802049C5DC00BF89AA /* YATLaunchInteractor.h */,
+				0E5DBE812049C5DC00BF89AA /* YATLaunchInteractor.m */,
+				0E5DBE832049C61F00BF89AA /* YATLaunchIntercatorType.h */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		0E5DBE842049C7B100BF89AA /* State */ = {
+			isa = PBXGroup;
+			children = (
+				0E5DBE852049C7C300BF89AA /* YATAppState.h */,
+				0E5DBE862049C7C300BF89AA /* YATAppState.m */,
+			);
+			path = State;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +224,8 @@
 			files = (
 				0E5DBE592049AE6A00BF89AA /* LaunchScreen.storyboard in Resources */,
 				0E5DBE562049AE6A00BF89AA /* Assets.xcassets in Resources */,
-				0E5DBE512049AE6A00BF89AA /* Main.storyboard in Resources */,
+				0E5DBE6E2049B31700BF89AA /* YATTwitterConfig.plist in Resources */,
+				0E5DBE7E2049C2BF00BF89AA /* YATLaunchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,24 +236,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E5DBE6C2049B26F00BF89AA /* YATAuthToken.m in Sources */,
+				0E5DBE692049B1EF00BF89AA /* YATTwitterService.m in Sources */,
 				0E5DBE4E2049AE6A00BF89AA /* ViewController.m in Sources */,
+				0E5DBE742049B4EA00BF89AA /* YATTwitterHelper.m in Sources */,
 				0E5DBE542049AE6A00BF89AA /* YATwitter.xcdatamodeld in Sources */,
+				0E5DBE712049B3C100BF89AA /* YATTwitterConfig.m in Sources */,
 				0E5DBE5C2049AE6A00BF89AA /* main.m in Sources */,
 				0E5DBE4B2049AE6A00BF89AA /* AppDelegate.m in Sources */,
+				0E5DBE872049C7C300BF89AA /* YATAppState.m in Sources */,
+				0E5DBE652049AF2B00BF89AA /* NetworkProvider.m in Sources */,
+				0E5DBE782049BAD900BF89AA /* YATTokenMapper.m in Sources */,
+				0E5DBE7D2049C2BF00BF89AA /* YATLaunchViewController.m in Sources */,
+				0E5DBE822049C5DC00BF89AA /* YATLaunchInteractor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0E5DBE4F2049AE6A00BF89AA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0E5DBE502049AE6A00BF89AA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0E5DBE572049AE6A00BF89AA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -222,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -271,7 +363,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -283,11 +375,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4AY3B49542;
 				INFOPLIST_FILE = YATwitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.YATwitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -296,11 +389,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4AY3B49542;
 				INFOPLIST_FILE = YATwitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.YATwitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
