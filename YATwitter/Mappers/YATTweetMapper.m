@@ -7,6 +7,9 @@
 //
 
 #import "YATTweetMapper.h"
+#import "Tweet+CoreDataProperties.h"
+#import "User+CoreDataProperties.h"
+#import "Avatar+CoreDataProperties.h"
 
 @implementation YATTweetMapper
 
@@ -37,6 +40,23 @@
     
     return tweet;
     
+}
+
+- (NSArray<YATTweet*>*)tweetsFromCDTweets:(NSArray<Tweet*>*)CDTweets {
+    NSMutableArray<YATTweet*>* result = [[NSMutableArray alloc] init];
+    
+    for (Tweet* twt in CDTweets) {
+        YATTweet* tweet = [[YATTweet alloc] init];
+        tweet.tweetID = twt.tweetID;
+        tweet.text = twt.text;
+        tweet.username = twt.user.username;
+        tweet.userID = twt.user.userID;
+        tweet.avatarPath = twt.user.avatar.url;
+        
+        [result addObject:tweet];
+    }
+    
+    return [result copy];
 }
 
 @end

@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "YATTweet.h"
 
+@class Tweet;
+
 @interface YATTweetMapper : NSObject
 - (NSArray<YATTweet*>*)tweetsFromJsonObject:(NSArray*)object;
+- (NSArray<YATTweet*>*)tweetsFromCDTweets:(NSArray<Tweet*>*)CDTweets;
 @end
