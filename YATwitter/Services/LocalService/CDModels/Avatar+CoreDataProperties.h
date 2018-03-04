@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<Avatar *> *)fetchRequest;
 
-@property (nullable, nonatomic, copy) NSUUID *identifier;
+@property (nullable, nonatomic, copy) NSString *identifier;
 @property (nullable, nonatomic, copy) NSString *url;
 @property (nullable, nonatomic, retain) User *user;
 
