@@ -8,9 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+@class YATCounter;
+
+@protocol YATCounterDelegate <NSObject>
+- (void)counter:(YATCounter*)counter didChangeTimer:(NSInteger)count;
+@end
+
 @interface YATCounter : NSObject
 @property (nonatomic, assign) NSInteger numOfSecondsToFire;
+@property (nonatomic, weak) id<YATCounterDelegate> delegate;
 
+- (void)setTarget:(id)target action:(SEL)action;
 - (void)start;
+- (void)stop;
+- (void)reset;
 
 @end

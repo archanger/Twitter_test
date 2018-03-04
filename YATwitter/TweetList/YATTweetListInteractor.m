@@ -7,14 +7,14 @@
 //
 
 #import "YATTweetListInteractor.h"
+#import "YATCounter.h"
 
-@interface YATTweetListInteractor ()
+@interface YATTweetListInteractor () <YATCounterDelegate>
 @property (nonatomic, strong) id<YATTwitterSearchServiceType> service;
 @property (nonatomic, assign) BOOL byUsername;
 
 @property (nonatomic, copy) NSString* lastSearchString;
-@property (nonatomic, assign) NSInteger secondsToUpdate;
-@property (nonatomic, strong) NSTimer* timer;
+@property (nonatomic, strong) YATCounter* countdown;
 @end
 
 @implementation YATTweetListInteractor
@@ -22,6 +22,11 @@
 - (instancetype)initWithService:(id<YATTwitterSearchServiceType>)service {
     if (self = [super init]) {
         _service = service;
+        _countdown = [[YATCounter alloc] init];
+        _countdown.numOfSecondsToFire = 60;
+        [_countdown setTarget:self action:@selector(countdownAction)];
+        _countdown.delegate = self;
+        [_countdown start];
         [self resetTimerForWord:nil];
     }
     
@@ -54,6 +59,13 @@
     }
 }
 
+- (void)resetTimerForWord:(NSString*)word {
+    self.lastSearchString = word;
+    
+    [self.countdown reset];
+    [self.output setCurrentCountdown:self.countdown.numOfSecondsToFire];
+}
+
 - (void)setBySearch {
     self.byUsername = NO;
 }
@@ -62,24 +74,15 @@
     self.byUsername = YES;
 }
 
-- (void)resetTimerForWord:(NSString*)word {
-    self.lastSearchString = word;
+
+
+- (void)countdownAction {
     
-    [self.timer invalidate];
-    self.secondsToUpdate = 60;
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countdown) userInfo:nil repeats:YES];
-    [self.output setCurrentCountdown:self.secondsToUpdate];
+    [self searchText:self.lastSearchString];
 }
 
-- (void)countdown {
-    
-    if (self.secondsToUpdate == 0) {
-        [self searchText:self.lastSearchString];
-        return;
-    }
-    
-    self.secondsToUpdate -= 1;
-    [self.output setCurrentCountdown:self.secondsToUpdate];
+- (void)counter:(YATCounter *)counter didChangeTimer:(NSInteger)count {
+    [self.output setCurrentCountdown:count];
 }
 
 @end
