@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "YATTwitterReadwriteSearchServiceType.h"
-@import CoreData;
-
+#import "YATCoreDataProviderType.h"
 
 @interface YATLocalService : NSObject <YATTwitterReadwriteSearchServiceType>
-- (instancetype)initWithPersostentContainer:(NSPersistentContainer*)container;
+- (instancetype)initWithCDProvider: (id<YATCoreDataProviderType>)provider;
+- (instancetype)init NS_UNAVAILABLE;
 @end

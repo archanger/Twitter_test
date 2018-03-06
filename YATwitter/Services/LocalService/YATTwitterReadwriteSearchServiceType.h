@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "YATTwitterSearchServiceType.h"
 
-typedef void(^YATTwitterReadwriteSearchServiceTypeCompletion)();
+typedef void(^YATTwitterReadwriteSearchServiceTypeCompletion)(void);
 
 @protocol YATTwitterReadwriteSearchServiceType <YATTwitterSearchServiceType>
 - (void)putTweets:(NSArray<YATTweet*>*)tweets completion:(YATTwitterReadwriteSearchServiceTypeCompletion)completion;

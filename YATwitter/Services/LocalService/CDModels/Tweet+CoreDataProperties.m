@@ -2,7 +2,7 @@
 //  Tweet+CoreDataProperties.m
 //  YATwitter
 //
-//  Created by Кирилл Чуянов on 04.03.2018.
+//  Created by Кирилл Чуянов on 06.03.2018.
 //  Copyright © 2018 Кирилл Чуянов. All rights reserved.
 //
 //
@@ -15,8 +15,8 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"Tweet"];
 }
 
-@dynamic tweetID;
 @dynamic text;
+@dynamic tweetID;
 @dynamic user;
 
 @end

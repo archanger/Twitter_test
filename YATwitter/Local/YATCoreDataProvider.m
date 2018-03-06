@@ -10,7 +10,7 @@
 @import CoreData;
 
 @interface YATCoreDataProvider ()
-@property (readonly, strong) NSPersistentContainer *persistentContainer;
+@property (readonly, strong) NSPersistentContainer* persistentContainer;
 @end
 
 @implementation YATCoreDataProvider

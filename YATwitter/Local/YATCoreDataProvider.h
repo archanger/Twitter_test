@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "YATCoreDataProviderType.h"
 
-@interface YATCoreDataProvider : NSObject
+@interface YATCoreDataProvider : NSObject <YATCoreDataProviderType>
 
 @end

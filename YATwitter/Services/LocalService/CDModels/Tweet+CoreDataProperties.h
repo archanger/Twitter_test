@@ -2,7 +2,7 @@
 //  Tweet+CoreDataProperties.h
 //  YATwitter
 //
-//  Created by Кирилл Чуянов on 04.03.2018.
+//  Created by Кирилл Чуянов on 06.03.2018.
 //  Copyright © 2018 Кирилл Чуянов. All rights reserved.
 //
 //
@@ -16,8 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<Tweet *> *)fetchRequest;
 
-@property (nullable, nonatomic, copy) NSString *tweetID;
 @property (nullable, nonatomic, copy) NSString *text;
+@property (nullable, nonatomic, copy) NSString *tweetID;
 @property (nullable, nonatomic, retain) User *user;
 
 @end

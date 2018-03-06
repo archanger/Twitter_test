@@ -38,12 +38,10 @@
 		ED600AEB204B30ED00F4417C /* YATCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = ED600AEA204B30ED00F4417C /* YATCounter.m */; };
 		ED600E37204C3F80006F4CF0 /* YATCoreDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = ED600E36204C3F80006F4CF0 /* YATCoreDataProvider.m */; };
 		ED600E3B204C47A2006F4CF0 /* YATLocalService.m in Sources */ = {isa = PBXBuildFile; fileRef = ED600E3A204C47A2006F4CF0 /* YATLocalService.m */; };
-		ED600E49204C4CC0006F4CF0 /* User+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = ED600E3E204C4CC0006F4CF0 /* User+CoreDataClass.m */; };
-		ED600E4A204C4CC0006F4CF0 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = ED600E40204C4CC0006F4CF0 /* User+CoreDataProperties.m */; };
-		ED600E4B204C4CC0006F4CF0 /* Tweet+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = ED600E42204C4CC0006F4CF0 /* Tweet+CoreDataClass.m */; };
-		ED600E4C204C4CC0006F4CF0 /* Tweet+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = ED600E44204C4CC0006F4CF0 /* Tweet+CoreDataProperties.m */; };
-		ED600E4D204C4CC0006F4CF0 /* Avatar+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = ED600E46204C4CC0006F4CF0 /* Avatar+CoreDataClass.m */; };
-		ED600E4E204C4CC0006F4CF0 /* Avatar+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = ED600E48204C4CC0006F4CF0 /* Avatar+CoreDataProperties.m */; };
+		EDE40DAC204E8B1700FF8DA9 /* YATCachingTweetService.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE40DAB204E8B1700FF8DA9 /* YATCachingTweetService.m */; };
+		EDE40DBB204E96CF00FF8DA9 /* Avatar+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE40DB1204E96CF00FF8DA9 /* Avatar+CoreDataProperties.m */; };
+		EDE40DBD204E96CF00FF8DA9 /* Tweet+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE40DB5204E96CF00FF8DA9 /* Tweet+CoreDataProperties.m */; };
+		EDE40DBF204E96CF00FF8DA9 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE40DB9204E96CF00FF8DA9 /* User+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,19 +110,22 @@
 		ED600E36204C3F80006F4CF0 /* YATCoreDataProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YATCoreDataProvider.m; sourceTree = "<group>"; };
 		ED600E39204C47A2006F4CF0 /* YATLocalService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATLocalService.h; sourceTree = "<group>"; };
 		ED600E3A204C47A2006F4CF0 /* YATLocalService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YATLocalService.m; sourceTree = "<group>"; };
-		ED600E3D204C4CC0006F4CF0 /* User+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataClass.h"; sourceTree = "<group>"; };
-		ED600E3E204C4CC0006F4CF0 /* User+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataClass.m"; sourceTree = "<group>"; };
-		ED600E3F204C4CC0006F4CF0 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
-		ED600E40204C4CC0006F4CF0 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
-		ED600E41204C4CC0006F4CF0 /* Tweet+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tweet+CoreDataClass.h"; sourceTree = "<group>"; };
-		ED600E42204C4CC0006F4CF0 /* Tweet+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Tweet+CoreDataClass.m"; sourceTree = "<group>"; };
-		ED600E43204C4CC0006F4CF0 /* Tweet+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tweet+CoreDataProperties.h"; sourceTree = "<group>"; };
-		ED600E44204C4CC0006F4CF0 /* Tweet+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Tweet+CoreDataProperties.m"; sourceTree = "<group>"; };
-		ED600E45204C4CC0006F4CF0 /* Avatar+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Avatar+CoreDataClass.h"; sourceTree = "<group>"; };
-		ED600E46204C4CC0006F4CF0 /* Avatar+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Avatar+CoreDataClass.m"; sourceTree = "<group>"; };
-		ED600E47204C4CC0006F4CF0 /* Avatar+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Avatar+CoreDataProperties.h"; sourceTree = "<group>"; };
-		ED600E48204C4CC0006F4CF0 /* Avatar+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Avatar+CoreDataProperties.m"; sourceTree = "<group>"; };
 		ED600E4F204C58C3006F4CF0 /* YATTwitterReadwriteSearchServiceType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATTwitterReadwriteSearchServiceType.h; sourceTree = "<group>"; };
+		EDE40DAA204E8B1700FF8DA9 /* YATCachingTweetService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATCachingTweetService.h; sourceTree = "<group>"; };
+		EDE40DAB204E8B1700FF8DA9 /* YATCachingTweetService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YATCachingTweetService.m; sourceTree = "<group>"; };
+		EDE40DAD204E8F8400FF8DA9 /* YATCoreDataProviderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATCoreDataProviderType.h; sourceTree = "<group>"; };
+		EDE40DAE204E96CF00FF8DA9 /* Avatar+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Avatar+CoreDataClass.h"; sourceTree = "<group>"; };
+		EDE40DAF204E96CF00FF8DA9 /* Avatar+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Avatar+CoreDataClass.m"; sourceTree = "<group>"; };
+		EDE40DB0204E96CF00FF8DA9 /* Avatar+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Avatar+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EDE40DB1204E96CF00FF8DA9 /* Avatar+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Avatar+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EDE40DB2204E96CF00FF8DA9 /* Tweet+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tweet+CoreDataClass.h"; sourceTree = "<group>"; };
+		EDE40DB3204E96CF00FF8DA9 /* Tweet+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Tweet+CoreDataClass.m"; sourceTree = "<group>"; };
+		EDE40DB4204E96CF00FF8DA9 /* Tweet+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tweet+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EDE40DB5204E96CF00FF8DA9 /* Tweet+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Tweet+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EDE40DB6204E96CF00FF8DA9 /* User+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataClass.h"; sourceTree = "<group>"; };
+		EDE40DB7204E96CF00FF8DA9 /* User+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataClass.m"; sourceTree = "<group>"; };
+		EDE40DB8204E96CF00FF8DA9 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EDE40DB9204E96CF00FF8DA9 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +190,7 @@
 		0E5DBE662049B1E000BF89AA /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				EDE40DA9204E8AEB00FF8DA9 /* CachingService */,
 				ED600E38204C4785006F4CF0 /* LocalService */,
 				ED600AE3204B1CC000F4417C /* AuthService */,
 				ED600AE4204B1CCC00F4417C /* SearchService */,
@@ -300,6 +302,7 @@
 			children = (
 				ED600E35204C3F80006F4CF0 /* YATCoreDataProvider.h */,
 				ED600E36204C3F80006F4CF0 /* YATCoreDataProvider.m */,
+				EDE40DAD204E8F8400FF8DA9 /* YATCoreDataProviderType.h */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -318,20 +321,29 @@
 		ED600E3C204C4CAF006F4CF0 /* CDModels */ = {
 			isa = PBXGroup;
 			children = (
-				ED600E3D204C4CC0006F4CF0 /* User+CoreDataClass.h */,
-				ED600E3E204C4CC0006F4CF0 /* User+CoreDataClass.m */,
-				ED600E3F204C4CC0006F4CF0 /* User+CoreDataProperties.h */,
-				ED600E40204C4CC0006F4CF0 /* User+CoreDataProperties.m */,
-				ED600E41204C4CC0006F4CF0 /* Tweet+CoreDataClass.h */,
-				ED600E42204C4CC0006F4CF0 /* Tweet+CoreDataClass.m */,
-				ED600E43204C4CC0006F4CF0 /* Tweet+CoreDataProperties.h */,
-				ED600E44204C4CC0006F4CF0 /* Tweet+CoreDataProperties.m */,
-				ED600E45204C4CC0006F4CF0 /* Avatar+CoreDataClass.h */,
-				ED600E46204C4CC0006F4CF0 /* Avatar+CoreDataClass.m */,
-				ED600E47204C4CC0006F4CF0 /* Avatar+CoreDataProperties.h */,
-				ED600E48204C4CC0006F4CF0 /* Avatar+CoreDataProperties.m */,
+				EDE40DAE204E96CF00FF8DA9 /* Avatar+CoreDataClass.h */,
+				EDE40DAF204E96CF00FF8DA9 /* Avatar+CoreDataClass.m */,
+				EDE40DB0204E96CF00FF8DA9 /* Avatar+CoreDataProperties.h */,
+				EDE40DB1204E96CF00FF8DA9 /* Avatar+CoreDataProperties.m */,
+				EDE40DB2204E96CF00FF8DA9 /* Tweet+CoreDataClass.h */,
+				EDE40DB3204E96CF00FF8DA9 /* Tweet+CoreDataClass.m */,
+				EDE40DB4204E96CF00FF8DA9 /* Tweet+CoreDataProperties.h */,
+				EDE40DB5204E96CF00FF8DA9 /* Tweet+CoreDataProperties.m */,
+				EDE40DB6204E96CF00FF8DA9 /* User+CoreDataClass.h */,
+				EDE40DB7204E96CF00FF8DA9 /* User+CoreDataClass.m */,
+				EDE40DB8204E96CF00FF8DA9 /* User+CoreDataProperties.h */,
+				EDE40DB9204E96CF00FF8DA9 /* User+CoreDataProperties.m */,
 			);
 			path = CDModels;
+			sourceTree = "<group>";
+		};
+		EDE40DA9204E8AEB00FF8DA9 /* CachingService */ = {
+			isa = PBXGroup;
+			children = (
+				EDE40DAA204E8B1700FF8DA9 /* YATCachingTweetService.h */,
+				EDE40DAB204E8B1700FF8DA9 /* YATCachingTweetService.m */,
+			);
+			path = CachingService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,22 +425,21 @@
 				ED600AEB204B30ED00F4417C /* YATCounter.m in Sources */,
 				0E5DBE692049B1EF00BF89AA /* YATTwitterAuthService.m in Sources */,
 				ED600AC1204AC0CC00F4417C /* YATLaunchRouter.m in Sources */,
-				ED600E4C204C4CC0006F4CF0 /* Tweet+CoreDataProperties.m in Sources */,
-				ED600E4B204C4CC0006F4CF0 /* Tweet+CoreDataClass.m in Sources */,
+				EDE40DBD204E96CF00FF8DA9 /* Tweet+CoreDataProperties.m in Sources */,
 				0E5DBE742049B4EA00BF89AA /* YATTwitterHelper.m in Sources */,
+				EDE40DAC204E8B1700FF8DA9 /* YATCachingTweetService.m in Sources */,
 				0E5DBE542049AE6A00BF89AA /* YATwitter.xcdatamodeld in Sources */,
 				ED600ADE204AF41800F4417C /* YATTweetCell.m in Sources */,
 				0E5DBE712049B3C100BF89AA /* YATTwitterConfig.m in Sources */,
 				ED600AD6204AD9E300F4417C /* YATTweetMapper.m in Sources */,
-				ED600E4E204C4CC0006F4CF0 /* Avatar+CoreDataProperties.m in Sources */,
 				ED600ACB204AC4F800F4417C /* YATTweetListRouter.m in Sources */,
+				EDE40DBF204E96CF00FF8DA9 /* User+CoreDataProperties.m in Sources */,
 				0E5DBE5C2049AE6A00BF89AA /* main.m in Sources */,
-				ED600E4A204C4CC0006F4CF0 /* User+CoreDataProperties.m in Sources */,
 				0E5DBE4B2049AE6A00BF89AA /* AppDelegate.m in Sources */,
 				ED600E37204C3F80006F4CF0 /* YATCoreDataProvider.m in Sources */,
 				ED600AC7204AC4BB00F4417C /* YATTweetListViewController.m in Sources */,
+				EDE40DBB204E96CF00FF8DA9 /* Avatar+CoreDataProperties.m in Sources */,
 				ED600AD3204AD7E500F4417C /* YATTweet.m in Sources */,
-				ED600E49204C4CC0006F4CF0 /* User+CoreDataClass.m in Sources */,
 				ED600AE2204B1CAD00F4417C /* YATTwitterSearchService.m in Sources */,
 				ED600AD9204AEC8500F4417C /* YATTweetListDatasource.m in Sources */,
 				0E5DBE872049C7C300BF89AA /* YATAppState.m in Sources */,
@@ -437,7 +448,6 @@
 				ED600ABE204AAF3200F4417C /* YATLaunchFactory.m in Sources */,
 				0E5DBE782049BAD900BF89AA /* YATTokenMapper.m in Sources */,
 				0E5DBE7D2049C2BF00BF89AA /* YATLaunchViewController.m in Sources */,
-				ED600E4D204C4CC0006F4CF0 /* Avatar+CoreDataClass.m in Sources */,
 				0E5DBE822049C5DC00BF89AA /* YATLaunchInteractor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

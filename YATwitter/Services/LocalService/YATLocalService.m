@@ -13,22 +13,24 @@
 #import "Avatar+CoreDataProperties.h"
 #import "YATTweetMapper.h"
 
+@import CoreData;
+
 @interface YATLocalService ()
-@property (nonatomic, strong) NSPersistentContainer* container;
+@property (nonatomic, strong) id<YATCoreDataProviderType> provider;
 @end
 
 @implementation YATLocalService
 
-- (instancetype)initWithPersostentContainer:(NSPersistentContainer*)container {
+- (instancetype)initWithCDProvider: (id<YATCoreDataProviderType>)provider {
     if (self = [super init]) {
-        _container = container;
+        _provider = provider;
     }
     return self;
 }
 
 - (void)getTweetsByWord:(NSString *)word completion:(YATTwitterServiceTweetsCompletion)completion {
-    dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0), ^{
-        __auto_type context = [self.container newBackgroundContext];
+    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
+        __auto_type context = [self.provider.persistentContainer newBackgroundContext];
         __auto_type request = [Tweet fetchRequest];
         request.predicate = [NSPredicate predicateWithFormat:@"text CONTAINS[cd] %@", word];
         request.fetchLimit = 100;
@@ -43,8 +45,8 @@
 }
 
 - (void)getTweetsForUsername:(NSString *)username completion:(YATTwitterServiceTweetsCompletion)completion {
-    dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0), ^{
-        __auto_type context = [self.container newBackgroundContext];
+    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
+        __auto_type context = [self.provider.persistentContainer newBackgroundContext];
         __auto_type request = [Tweet fetchRequest];
         request.predicate = [NSPredicate predicateWithFormat:@"SUBQUERY(user, $u, $u.username CONTAINS[cd] %@).@count > 0", username];
         request.fetchLimit = 100;
@@ -60,8 +62,8 @@
 
 - (void)putTweets:(NSArray<YATTweet *> *)tweets completion:(YATTwitterReadwriteSearchServiceTypeCompletion)completion {
     
-    dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0), ^{
-        __auto_type context = [self.container newBackgroundContext];
+    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
+        __auto_type context = [self.provider.persistentContainer newBackgroundContext];
         
         for (YATTweet* tweet in tweets) {
             
@@ -73,11 +75,16 @@
             if (twt) {
                 [self updateCDTweet:twt withTweet:tweet];
             } else {
-                //create
+                [self createNewCDTweetFromTweet:tweet inContext:context];
             }
-            
-            
         }
+        
+        NSError* error;
+        [context save:&error];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completion();
+        });
     });
     
 }
@@ -100,6 +107,7 @@
     User* user = [[context executeFetchRequest:request error:&error] firstObject];
     if (user) {
         [self updateUser:user fromTweet:tweet];
+        cdTweet.user = user;
     } else {
         cdTweet.user = [self createUserFromTweet:tweet inContext:context];
     }
