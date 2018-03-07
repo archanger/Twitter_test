@@ -23,6 +23,7 @@
 		0E5DBE7E2049C2BF00BF89AA /* YATLaunchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E5DBE7C2049C2BF00BF89AA /* YATLaunchViewController.xib */; };
 		0E5DBE822049C5DC00BF89AA /* YATLaunchInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5DBE812049C5DC00BF89AA /* YATLaunchInteractor.m */; };
 		0E5DBE872049C7C300BF89AA /* YATAppState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5DBE862049C7C300BF89AA /* YATAppState.m */; };
+		35A3E40F9066A34E56964D70 /* libPods-YATwitter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EEDB46907CC00B31671626C /* libPods-YATwitter.a */; };
 		ED600ABE204AAF3200F4417C /* YATLaunchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = ED600ABD204AAF3200F4417C /* YATLaunchFactory.m */; };
 		ED600AC1204AC0CC00F4417C /* YATLaunchRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = ED600AC0204AC0CC00F4417C /* YATLaunchRouter.m */; };
 		ED600AC7204AC4BB00F4417C /* YATTweetListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED600AC5204AC4BB00F4417C /* YATTweetListViewController.m */; };
@@ -38,10 +39,10 @@
 		ED600AEB204B30ED00F4417C /* YATCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = ED600AEA204B30ED00F4417C /* YATCounter.m */; };
 		ED600E37204C3F80006F4CF0 /* YATCoreDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = ED600E36204C3F80006F4CF0 /* YATCoreDataProvider.m */; };
 		ED600E3B204C47A2006F4CF0 /* YATLocalService.m in Sources */ = {isa = PBXBuildFile; fileRef = ED600E3A204C47A2006F4CF0 /* YATLocalService.m */; };
+		EDA88CB2204FC5A20087C910 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA88CAC204FC5A20087C910 /* User+CoreDataProperties.m */; };
+		EDA88CB4204FC5A20087C910 /* Tweet+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA88CB0204FC5A20087C910 /* Tweet+CoreDataProperties.m */; };
+		EDA88CB8204FC6990087C910 /* UIImageView+YATExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA88CB7204FC6990087C910 /* UIImageView+YATExtensions.m */; };
 		EDE40DAC204E8B1700FF8DA9 /* YATCachingTweetService.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE40DAB204E8B1700FF8DA9 /* YATCachingTweetService.m */; };
-		EDE40DBB204E96CF00FF8DA9 /* Avatar+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE40DB1204E96CF00FF8DA9 /* Avatar+CoreDataProperties.m */; };
-		EDE40DBD204E96CF00FF8DA9 /* Tweet+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE40DB5204E96CF00FF8DA9 /* Tweet+CoreDataProperties.m */; };
-		EDE40DBF204E96CF00FF8DA9 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE40DB9204E96CF00FF8DA9 /* User+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,9 @@
 		0E5DBE832049C61F00BF89AA /* YATLaunchIntercatorType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATLaunchIntercatorType.h; sourceTree = "<group>"; };
 		0E5DBE852049C7C300BF89AA /* YATAppState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATAppState.h; sourceTree = "<group>"; };
 		0E5DBE862049C7C300BF89AA /* YATAppState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YATAppState.m; sourceTree = "<group>"; };
+		3EEDB46907CC00B31671626C /* libPods-YATwitter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YATwitter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD2F90F5E963FF9F79EC9FF9 /* Pods-YATwitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YATwitter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YATwitter/Pods-YATwitter.debug.xcconfig"; sourceTree = "<group>"; };
+		BE827131E2C8D616D83A325A /* Pods-YATwitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YATwitter.release.xcconfig"; path = "Pods/Target Support Files/Pods-YATwitter/Pods-YATwitter.release.xcconfig"; sourceTree = "<group>"; };
 		ED600ABB204AAC4300F4417C /* YATLaunchIntercatorOutput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATLaunchIntercatorOutput.h; sourceTree = "<group>"; };
 		ED600ABC204AAF3200F4417C /* YATLaunchFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATLaunchFactory.h; sourceTree = "<group>"; };
 		ED600ABD204AAF3200F4417C /* YATLaunchFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YATLaunchFactory.m; sourceTree = "<group>"; };
@@ -111,21 +115,19 @@
 		ED600E39204C47A2006F4CF0 /* YATLocalService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATLocalService.h; sourceTree = "<group>"; };
 		ED600E3A204C47A2006F4CF0 /* YATLocalService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YATLocalService.m; sourceTree = "<group>"; };
 		ED600E4F204C58C3006F4CF0 /* YATTwitterReadwriteSearchServiceType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATTwitterReadwriteSearchServiceType.h; sourceTree = "<group>"; };
+		EDA88CA9204FC5A20087C910 /* User+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataClass.h"; sourceTree = "<group>"; };
+		EDA88CAA204FC5A20087C910 /* User+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataClass.m"; sourceTree = "<group>"; };
+		EDA88CAB204FC5A20087C910 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EDA88CAC204FC5A20087C910 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EDA88CAD204FC5A20087C910 /* Tweet+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tweet+CoreDataClass.h"; sourceTree = "<group>"; };
+		EDA88CAE204FC5A20087C910 /* Tweet+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Tweet+CoreDataClass.m"; sourceTree = "<group>"; };
+		EDA88CAF204FC5A20087C910 /* Tweet+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tweet+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EDA88CB0204FC5A20087C910 /* Tweet+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Tweet+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EDA88CB6204FC6990087C910 /* UIImageView+YATExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+YATExtensions.h"; sourceTree = "<group>"; };
+		EDA88CB7204FC6990087C910 /* UIImageView+YATExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+YATExtensions.m"; sourceTree = "<group>"; };
 		EDE40DAA204E8B1700FF8DA9 /* YATCachingTweetService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATCachingTweetService.h; sourceTree = "<group>"; };
 		EDE40DAB204E8B1700FF8DA9 /* YATCachingTweetService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YATCachingTweetService.m; sourceTree = "<group>"; };
 		EDE40DAD204E8F8400FF8DA9 /* YATCoreDataProviderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATCoreDataProviderType.h; sourceTree = "<group>"; };
-		EDE40DAE204E96CF00FF8DA9 /* Avatar+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Avatar+CoreDataClass.h"; sourceTree = "<group>"; };
-		EDE40DAF204E96CF00FF8DA9 /* Avatar+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Avatar+CoreDataClass.m"; sourceTree = "<group>"; };
-		EDE40DB0204E96CF00FF8DA9 /* Avatar+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Avatar+CoreDataProperties.h"; sourceTree = "<group>"; };
-		EDE40DB1204E96CF00FF8DA9 /* Avatar+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Avatar+CoreDataProperties.m"; sourceTree = "<group>"; };
-		EDE40DB2204E96CF00FF8DA9 /* Tweet+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tweet+CoreDataClass.h"; sourceTree = "<group>"; };
-		EDE40DB3204E96CF00FF8DA9 /* Tweet+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Tweet+CoreDataClass.m"; sourceTree = "<group>"; };
-		EDE40DB4204E96CF00FF8DA9 /* Tweet+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tweet+CoreDataProperties.h"; sourceTree = "<group>"; };
-		EDE40DB5204E96CF00FF8DA9 /* Tweet+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Tweet+CoreDataProperties.m"; sourceTree = "<group>"; };
-		EDE40DB6204E96CF00FF8DA9 /* User+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataClass.h"; sourceTree = "<group>"; };
-		EDE40DB7204E96CF00FF8DA9 /* User+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataClass.m"; sourceTree = "<group>"; };
-		EDE40DB8204E96CF00FF8DA9 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
-		EDE40DB9204E96CF00FF8DA9 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35A3E40F9066A34E56964D70 /* libPods-YATwitter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +147,8 @@
 			children = (
 				0E5DBE482049AE6A00BF89AA /* YATwitter */,
 				0E5DBE472049AE6A00BF89AA /* Products */,
+				56B1784DDFCDE5CDAB8BD81D /* Pods */,
+				C53085BDB077AC9D74B38FC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +163,7 @@
 		0E5DBE482049AE6A00BF89AA /* YATwitter */ = {
 			isa = PBXGroup;
 			children = (
+				EDA88CB5204FC6750087C910 /* Extensions */,
 				ED600AD0204AD7A200F4417C /* Models */,
 				ED600AC3204AC45200F4417C /* TweetList */,
 				0E5DBE842049C7B100BF89AA /* State */,
@@ -242,6 +248,23 @@
 			path = State;
 			sourceTree = "<group>";
 		};
+		56B1784DDFCDE5CDAB8BD81D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD2F90F5E963FF9F79EC9FF9 /* Pods-YATwitter.debug.xcconfig */,
+				BE827131E2C8D616D83A325A /* Pods-YATwitter.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C53085BDB077AC9D74B38FC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EEDB46907CC00B31671626C /* libPods-YATwitter.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ED600AC3204AC45200F4417C /* TweetList */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,20 +344,25 @@
 		ED600E3C204C4CAF006F4CF0 /* CDModels */ = {
 			isa = PBXGroup;
 			children = (
-				EDE40DAE204E96CF00FF8DA9 /* Avatar+CoreDataClass.h */,
-				EDE40DAF204E96CF00FF8DA9 /* Avatar+CoreDataClass.m */,
-				EDE40DB0204E96CF00FF8DA9 /* Avatar+CoreDataProperties.h */,
-				EDE40DB1204E96CF00FF8DA9 /* Avatar+CoreDataProperties.m */,
-				EDE40DB2204E96CF00FF8DA9 /* Tweet+CoreDataClass.h */,
-				EDE40DB3204E96CF00FF8DA9 /* Tweet+CoreDataClass.m */,
-				EDE40DB4204E96CF00FF8DA9 /* Tweet+CoreDataProperties.h */,
-				EDE40DB5204E96CF00FF8DA9 /* Tweet+CoreDataProperties.m */,
-				EDE40DB6204E96CF00FF8DA9 /* User+CoreDataClass.h */,
-				EDE40DB7204E96CF00FF8DA9 /* User+CoreDataClass.m */,
-				EDE40DB8204E96CF00FF8DA9 /* User+CoreDataProperties.h */,
-				EDE40DB9204E96CF00FF8DA9 /* User+CoreDataProperties.m */,
+				EDA88CA9204FC5A20087C910 /* User+CoreDataClass.h */,
+				EDA88CAA204FC5A20087C910 /* User+CoreDataClass.m */,
+				EDA88CAB204FC5A20087C910 /* User+CoreDataProperties.h */,
+				EDA88CAC204FC5A20087C910 /* User+CoreDataProperties.m */,
+				EDA88CAD204FC5A20087C910 /* Tweet+CoreDataClass.h */,
+				EDA88CAE204FC5A20087C910 /* Tweet+CoreDataClass.m */,
+				EDA88CAF204FC5A20087C910 /* Tweet+CoreDataProperties.h */,
+				EDA88CB0204FC5A20087C910 /* Tweet+CoreDataProperties.m */,
 			);
 			path = CDModels;
+			sourceTree = "<group>";
+		};
+		EDA88CB5204FC6750087C910 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EDA88CB6204FC6990087C910 /* UIImageView+YATExtensions.h */,
+				EDA88CB7204FC6990087C910 /* UIImageView+YATExtensions.m */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		EDE40DA9204E8AEB00FF8DA9 /* CachingService */ = {
@@ -353,9 +381,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E5DBE5F2049AE6A00BF89AA /* Build configuration list for PBXNativeTarget "YATwitter" */;
 			buildPhases = (
+				4CC35AF1E6A50C816CDBF821 /* [CP] Check Pods Manifest.lock */,
 				0E5DBE422049AE6A00BF89AA /* Sources */,
 				0E5DBE432049AE6A00BF89AA /* Frameworks */,
 				0E5DBE442049AE6A00BF89AA /* Resources */,
+				3CFB10FC61B5A3500349751E /* [CP] Embed Pods Frameworks */,
+				8EEF7D5DCA0682CA3CF6E696 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -415,17 +446,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3CFB10FC61B5A3500349751E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YATwitter/Pods-YATwitter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CC35AF1E6A50C816CDBF821 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YATwitter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EEF7D5DCA0682CA3CF6E696 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YATwitter/Pods-YATwitter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0E5DBE422049AE6A00BF89AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0E5DBE6C2049B26F00BF89AA /* YATAuthToken.m in Sources */,
+				EDA88CB8204FC6990087C910 /* UIImageView+YATExtensions.m in Sources */,
 				ED600E3B204C47A2006F4CF0 /* YATLocalService.m in Sources */,
 				ED600AEB204B30ED00F4417C /* YATCounter.m in Sources */,
 				0E5DBE692049B1EF00BF89AA /* YATTwitterAuthService.m in Sources */,
 				ED600AC1204AC0CC00F4417C /* YATLaunchRouter.m in Sources */,
-				EDE40DBD204E96CF00FF8DA9 /* Tweet+CoreDataProperties.m in Sources */,
+				EDA88CB4204FC5A20087C910 /* Tweet+CoreDataProperties.m in Sources */,
 				0E5DBE742049B4EA00BF89AA /* YATTwitterHelper.m in Sources */,
 				EDE40DAC204E8B1700FF8DA9 /* YATCachingTweetService.m in Sources */,
 				0E5DBE542049AE6A00BF89AA /* YATwitter.xcdatamodeld in Sources */,
@@ -433,12 +516,11 @@
 				0E5DBE712049B3C100BF89AA /* YATTwitterConfig.m in Sources */,
 				ED600AD6204AD9E300F4417C /* YATTweetMapper.m in Sources */,
 				ED600ACB204AC4F800F4417C /* YATTweetListRouter.m in Sources */,
-				EDE40DBF204E96CF00FF8DA9 /* User+CoreDataProperties.m in Sources */,
 				0E5DBE5C2049AE6A00BF89AA /* main.m in Sources */,
+				EDA88CB2204FC5A20087C910 /* User+CoreDataProperties.m in Sources */,
 				0E5DBE4B2049AE6A00BF89AA /* AppDelegate.m in Sources */,
 				ED600E37204C3F80006F4CF0 /* YATCoreDataProvider.m in Sources */,
 				ED600AC7204AC4BB00F4417C /* YATTweetListViewController.m in Sources */,
-				EDE40DBB204E96CF00FF8DA9 /* Avatar+CoreDataProperties.m in Sources */,
 				ED600AD3204AD7E500F4417C /* YATTweet.m in Sources */,
 				ED600AE2204B1CAD00F4417C /* YATTwitterSearchService.m in Sources */,
 				ED600AD9204AEC8500F4417C /* YATTweetListDatasource.m in Sources */,
@@ -572,6 +654,7 @@
 		};
 		0E5DBE602049AE6A00BF89AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD2F90F5E963FF9F79EC9FF9 /* Pods-YATwitter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -586,6 +669,7 @@
 		};
 		0E5DBE612049AE6A00BF89AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE827131E2C8D616D83A325A /* Pods-YATwitter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

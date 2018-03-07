@@ -7,6 +7,7 @@
 //
 
 #import "YATTweetCell.h"
+#import "UIImageView+YATExtensions.h"
 
 @interface YATTweetCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *avatarView;
@@ -32,16 +33,7 @@
 - (void)updateWithTweet:(YATTweet *)tweet {
     self.text.text = tweet.text;
     self.username.text = tweet.username;
-    
-    dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0), ^{
-        UIImage* image = [UIImage imageWithData:
-                          [NSData dataWithContentsOfURL:
-                           [NSURL URLWithString:tweet.avatarPath]]
-                                          scale:2];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.avatarView.image = image;
-        });
-    });
+    [self.avatarView yat_setImageWithPath:tweet.avatarPath];
     
 }
 

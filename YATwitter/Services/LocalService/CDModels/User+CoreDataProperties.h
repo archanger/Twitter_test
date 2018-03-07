@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.h
 //  YATwitter
 //
-//  Created by Кирилл Чуянов on 06.03.2018.
+//  Created by Кирилл Чуянов on 07.03.2018.
 //  Copyright © 2018 Кирилл Чуянов. All rights reserved.
 //
 //
@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, copy) NSString *userID;
 @property (nullable, nonatomic, copy) NSString *username;
-@property (nullable, nonatomic, retain) Avatar *avatar;
+@property (nullable, nonatomic, copy) NSString *avatarUrl;
 @property (nullable, nonatomic, retain) NSSet<Tweet *> *tweets;
 
 @end

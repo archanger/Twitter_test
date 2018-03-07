@@ -9,7 +9,6 @@
 #import "YATTweetMapper.h"
 #import "Tweet+CoreDataProperties.h"
 #import "User+CoreDataProperties.h"
-#import "Avatar+CoreDataProperties.h"
 
 @implementation YATTweetMapper
 
@@ -51,7 +50,7 @@
         tweet.text = twt.text;
         tweet.username = twt.user.username;
         tweet.userID = twt.user.userID;
-        tweet.avatarPath = twt.user.avatar.url;
+        tweet.avatarPath = twt.user.avatarUrl;
         
         [result addObject:tweet];
     }

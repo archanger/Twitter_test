@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.m
 //  YATwitter
 //
-//  Created by Кирилл Чуянов on 06.03.2018.
+//  Created by Кирилл Чуянов on 07.03.2018.
 //  Copyright © 2018 Кирилл Чуянов. All rights reserved.
 //
 //
@@ -17,7 +17,7 @@
 
 @dynamic userID;
 @dynamic username;
-@dynamic avatar;
+@dynamic avatarUrl;
 @dynamic tweets;
 
 @end

@@ -1,14 +1,13 @@
 //
-//  Tweet+CoreDataClass.m
+//  UIImageView+YATExtensions.h
 //  YATwitter
 //
 //  Created by Кирилл Чуянов on 07.03.2018.
 //  Copyright © 2018 Кирилл Чуянов. All rights reserved.
 //
-//
 
-#import "Tweet+CoreDataClass.h"
+#import <UIKit/UIKit.h>
 
-@implementation Tweet
-
+@interface UIImageView (YATExtensions)
+- (void)yat_setImageWithPath:(NSString*)imagePath;
 @end

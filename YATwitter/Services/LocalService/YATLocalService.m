@@ -10,7 +10,6 @@
 #import "User+CoreDataProperties.h"
 #import "Tweet+CoreDataProperties.h"
 #import "User+CoreDataProperties.h"
-#import "Avatar+CoreDataProperties.h"
 #import "YATTweetMapper.h"
 
 @import CoreData;
@@ -29,6 +28,12 @@
 }
 
 - (void)getTweetsByWord:(NSString *)word completion:(YATTwitterServiceTweetsCompletion)completion {
+    
+    if(word.length == 0) {
+        completion(nil);
+        return;
+    }
+    
     dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
         __auto_type context = [self.provider.persistentContainer newBackgroundContext];
         __auto_type request = [Tweet fetchRequest];
@@ -45,10 +50,14 @@
 }
 
 - (void)getTweetsForUsername:(NSString *)username completion:(YATTwitterServiceTweetsCompletion)completion {
+    if(username.length == 0) {
+        completion(nil);
+        return;
+    }
     dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
         __auto_type context = [self.provider.persistentContainer newBackgroundContext];
         __auto_type request = [Tweet fetchRequest];
-        request.predicate = [NSPredicate predicateWithFormat:@"SUBQUERY(user, $u, $u.username CONTAINS[cd] %@).@count > 0", username];
+        request.predicate = [NSPredicate predicateWithFormat:@"SUBQUERY(user, $u, $u.username ==[cd] %@).@count > 0", username];
         request.fetchLimit = 100;
         NSError* error;
         NSArray<Tweet*>* CDTweets = [context executeFetchRequest:request error:&error];
@@ -92,7 +101,7 @@
 - (void)updateCDTweet:(Tweet*)CDTweet withTweet:(YATTweet*)tweet {
     CDTweet.text = tweet.text;
     CDTweet.user.username = tweet.username;
-    CDTweet.user.avatar.url = tweet.avatarPath;
+    CDTweet.user.avatarUrl = tweet.avatarPath;
 }
 
 - (void)createNewCDTweetFromTweet:(YATTweet*)tweet inContext:(NSManagedObjectContext*)context {
@@ -115,18 +124,13 @@
 
 - (void)updateUser:(User*)user fromTweet:(YATTweet*)tweet {
     user.username = tweet.username;
-    user.avatar.url = tweet.avatarPath;
+    user.avatarUrl = tweet.avatarPath;
 }
 
 - (User*)createUserFromTweet:(YATTweet*)tweet inContext:(NSManagedObjectContext*)context {
     User* user = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:context];
     user.userID = tweet.userID;
-    user.username = tweet.username;
-    
-    Avatar* ava = [NSEntityDescription insertNewObjectForEntityForName:@"Avatar" inManagedObjectContext:context];
-    ava.url = tweet.avatarPath;
-    
-    ava.user = user;
+    [self updateUser:user fromTweet:tweet];
     
     return user;
 }
