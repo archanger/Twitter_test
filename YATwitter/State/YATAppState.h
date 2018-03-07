@@ -10,7 +10,8 @@
 #import "YATAuthToken.h"
 
 @interface YATAppState : NSObject
-@property (nonatomic, strong) YATAuthToken* token;
+@property (atomic, strong) YATAuthToken* token;
+@property (atomic, assign, setter=setNeedToShowAvatar:) BOOL isNeedToShowAvatar;
 
 + (instancetype)sharedState;
 @end

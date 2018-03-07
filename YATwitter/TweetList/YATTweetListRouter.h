@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YATTweetListRouterType.h"
 
-@interface YATTweetListRouter : NSObject
+@interface YATTweetListRouter : NSObject<YATTweetListRouterType>
 + (UIViewController*)tweetList;
 @end

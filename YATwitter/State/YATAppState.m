@@ -8,7 +8,15 @@
 
 #import "YATAppState.h"
 
+#define YAT_KEY_FOR_AVATAR @"YAT_KEY_FOR_AVATAR"
+
+//@interface YATAppState ()
+//
+//@end
+
 @implementation YATAppState
+
+@synthesize isNeedToShowAvatar = _isNeedToShowAvatar;
 
 + (instancetype)sharedState {
     static dispatch_once_t onceToken;
@@ -18,6 +26,33 @@
     });
     
     return shared;
+}
+
+- (instancetype)init {
+    if (self = [super init]) {
+        _isNeedToShowAvatar = [[NSUserDefaults standardUserDefaults] boolForKey:YAT_KEY_FOR_AVATAR];
+    }
+    
+    return self;
+}
+
+- (void)setNeedToShowAvatar:(BOOL)isNeedToShowAvatar {
+    @synchronized(self) {
+        _isNeedToShowAvatar = isNeedToShowAvatar;
+        [self saveState];
+    }
+}
+
+- (BOOL)isNeedToShowAvatar {
+    return _isNeedToShowAvatar;
+}
+
+- (void)saveState {
+    [[NSUserDefaults standardUserDefaults] setBool:_isNeedToShowAvatar forKey:YAT_KEY_FOR_AVATAR];
+}
+
+- (void)dealloc {
+    [self saveState];
 }
 
 @end

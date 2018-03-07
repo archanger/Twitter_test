@@ -35,6 +35,11 @@
     [self.tableView registerNib:[YATTweetCell nib] forCellReuseIdentifier:[YATTweetCell reuseIdentifier]];
     
     [self.switchControl addTarget:self action:@selector(selectedOptionChanged:) forControlEvents:(UIControlEventValueChanged)];
+    
+     self.navigationItem.rightBarButtonItem =
+        [[UIBarButtonItem alloc] initWithBarButtonSystemItem:(UIBarButtonSystemItemBookmarks)
+                                                      target:self
+                                                      action:@selector(showSettings:)];
 }
 
 - (void)selectedOptionChanged:(UISegmentedControl*)sender {
@@ -52,6 +57,10 @@
 
 - (void)setCurrentCountdown:(NSInteger)count {
     self.counter.text = [NSString stringWithFormat:@"Time to update: %ld second(s)", (long)count];
+}
+
+- (void)showSettings:(UIBarButtonItem*)sender {
+    [self.router showSettings];
 }
 
 @end
