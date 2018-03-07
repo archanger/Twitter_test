@@ -38,7 +38,11 @@
 
 - (void)setNeedToShowAvatar:(BOOL)isNeedToShowAvatar {
     @synchronized(self) {
+        BOOL oldValue = _isNeedToShowAvatar;
         _isNeedToShowAvatar = isNeedToShowAvatar;
+        if (oldValue != isNeedToShowAvatar) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:YAT_STATE_CHANGED_NOTIFICATION object:@{YAT_AVATAR_STATE_KEY: @(_isNeedToShowAvatar)}];
+        }
         [self saveState];
     }
 }

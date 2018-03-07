@@ -36,7 +36,7 @@
                                         appState:[YATAppState sharedState]]];
     
     __auto_type interactor = [[YATTweetListInteractor alloc] initWithService:service];
-    __auto_type datasource = [[YATTweetListDatasource alloc] initWithAppState:[YATAppState sharedState]];
+    __auto_type datasource = [[YATTweetListDatasource alloc] init];
     __auto_type router = [[YATTweetListRouter alloc] initWithRootVC:list];
     
     list.interactor = interactor;

@@ -46,7 +46,6 @@
 		EDA88CBE204FCCD30087C910 /* YATSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDA88CBC204FCCD30087C910 /* YATSettingsViewController.xib */; };
 		EDA88CC1204FCDED0087C910 /* YATSettingsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA88CC0204FCDED0087C910 /* YATSettingsInteractor.m */; };
 		EDA88CC6204FD3EF0087C910 /* YATSettingsRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA88CC5204FD3EF0087C910 /* YATSettingsRouter.m */; };
-		EDA88CCB20503FEE0087C910 /* YATTweetCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA88CCA20503FEE0087C910 /* YATTweetCellModel.m */; };
 		EDE40DAC204E8B1700FF8DA9 /* YATCachingTweetService.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE40DAB204E8B1700FF8DA9 /* YATCachingTweetService.m */; };
 /* End PBXBuildFile section */
 
@@ -140,8 +139,6 @@
 		EDA88CC4204FD3EF0087C910 /* YATSettingsRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATSettingsRouter.h; sourceTree = "<group>"; };
 		EDA88CC5204FD3EF0087C910 /* YATSettingsRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YATSettingsRouter.m; sourceTree = "<group>"; };
 		EDA88CC7205039FC0087C910 /* YATTweetListRouterType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATTweetListRouterType.h; sourceTree = "<group>"; };
-		EDA88CC920503FEE0087C910 /* YATTweetCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATTweetCellModel.h; sourceTree = "<group>"; };
-		EDA88CCA20503FEE0087C910 /* YATTweetCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YATTweetCellModel.m; sourceTree = "<group>"; };
 		EDE40DAA204E8B1700FF8DA9 /* YATCachingTweetService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATCachingTweetService.h; sourceTree = "<group>"; };
 		EDE40DAB204E8B1700FF8DA9 /* YATCachingTweetService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YATCachingTweetService.m; sourceTree = "<group>"; };
 		EDE40DAD204E8F8400FF8DA9 /* YATCoreDataProviderType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YATCoreDataProviderType.h; sourceTree = "<group>"; };
@@ -286,7 +283,6 @@
 		ED600AC3204AC45200F4417C /* TweetList */ = {
 			isa = PBXGroup;
 			children = (
-				EDA88CC820503FD80087C910 /* ViewModel */,
 				ED600AC4204AC4BB00F4417C /* YATTweetListViewController.h */,
 				ED600AC5204AC4BB00F4417C /* YATTweetListViewController.m */,
 				ED600AC6204AC4BB00F4417C /* YATTweetListViewController.xib */,
@@ -399,15 +395,6 @@
 				EDA88CC5204FD3EF0087C910 /* YATSettingsRouter.m */,
 			);
 			path = Settings;
-			sourceTree = "<group>";
-		};
-		EDA88CC820503FD80087C910 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				EDA88CC920503FEE0087C910 /* YATTweetCellModel.h */,
-				EDA88CCA20503FEE0087C910 /* YATTweetCellModel.m */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		EDE40DA9204E8AEB00FF8DA9 /* CachingService */ = {
@@ -548,7 +535,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDA88CCB20503FEE0087C910 /* YATTweetCellModel.m in Sources */,
 				0E5DBE6C2049B26F00BF89AA /* YATAuthToken.m in Sources */,
 				EDA88CB8204FC6990087C910 /* UIImageView+YATExtensions.m in Sources */,
 				ED600E3B204C47A2006F4CF0 /* YATLocalService.m in Sources */,

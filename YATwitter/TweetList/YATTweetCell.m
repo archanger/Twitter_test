@@ -8,11 +8,15 @@
 
 #import "YATTweetCell.h"
 #import "UIImageView+YATExtensions.h"
+#import "YATAppState.h"
+
+#define DEFAULT_WIDTH_OF_AVATAR 44
 
 @interface YATTweetCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *avatarView;
 @property (weak, nonatomic) IBOutlet UILabel *username;
 @property (weak, nonatomic) IBOutlet UILabel *text;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *widthOfAvatarConstraint;
 @end
 
 @implementation YATTweetCell
@@ -28,6 +32,9 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applyStateChange:) name:YAT_STATE_CHANGED_NOTIFICATION object:nil];
+    
+    self.widthOfAvatarConstraint.constant = [[YATAppState sharedState] isNeedToShowAvatar] ? DEFAULT_WIDTH_OF_AVATAR : 0;
 }
 
 - (void)updateWithTweet:(YATTweet *)tweet {
@@ -37,4 +44,18 @@
     
 }
 
+- (void)applyStateChange:(NSNotification*)notification {
+    NSDictionary* newState = notification.object;
+    BOOL value = [[newState objectForKey:YAT_AVATAR_STATE_KEY] boolValue];
+    
+    if (value) {
+        self.widthOfAvatarConstraint.constant = DEFAULT_WIDTH_OF_AVATAR;
+    } else {
+        self.widthOfAvatarConstraint.constant = 0;
+    }
+}
+
+- (void)dealloc {
+    
+}
 @end
